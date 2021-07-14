@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Blog() {
+export default function Portfolio() {
   return (
     <div>
       <h1>Project 1</h1>
