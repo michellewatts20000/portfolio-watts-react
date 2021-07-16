@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Stack } from "@chakra-ui/layout";
 import NavTabs from './NavTabs';
-import Header from './Header';
+// import Header from './Header';
 import Footer from './Footer';
 import Resume from './pages/Resume';
 import About from './pages/About';
@@ -11,14 +12,14 @@ export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('About');
 
   const renderPage = () => {
-   
+
     if (currentPage === 'About') {
       return <About />;
     }
     if (currentPage === 'Portfolio') {
       return <Portfolio />;
     }
-     if (currentPage === 'Resume') {
+    if (currentPage === 'Resume') {
       return <Resume />;
     }
     return <Contact />;
@@ -27,13 +28,11 @@ export default function PortfolioContainer() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <div>
+    <Stack p={5}>
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      <Header />
-      <section>
+      {/* <Header /> */}
       {renderPage()}
-      </section>
       <Footer />
-    </div>
+    </Stack>
   );
 }
