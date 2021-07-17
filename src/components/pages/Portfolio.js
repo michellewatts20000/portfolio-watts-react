@@ -6,7 +6,7 @@ import {
   Box,
   Flex
 } from '@chakra-ui/layout';
-
+import Project from './Project';
 import { Grid } from "@chakra-ui/react"
 import { useMediaQuery } from '@chakra-ui/media-query';
 
@@ -19,13 +19,13 @@ export default function Portfolio() {
         spacing="200px" p={isNotSmallerScreen ? "32" : "0"}
         alignSelf="flex-start">
         <Grid templateColumns="repeat(4, 1fr)" gap={20}>
-          <Box>
-            <Heading>Project 1</Heading>
-            <Text>
-              Donec a volutpat quam. Curabitur nec varius justo, sed rutrum ligula.
-              Curabitur pellentesque turpis sit amet eros iaculis, a mollis arcu.
-            </Text>
-          </Box>
+          <Project />
+          <Heading>Project 1</Heading>
+          <Text>
+            Donec a volutpat quam. Curabitur nec varius justo, sed rutrum ligula.
+            Curabitur pellentesque turpis sit amet eros iaculis, a mollis arcu.
+          </Text>
+
           <Box>
             <Heading>Project 2</Heading>
             <Text>

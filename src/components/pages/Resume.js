@@ -16,7 +16,7 @@ export default function Resume() {
   return (
     <Stack>
       <Flex direction={isNotSmallerScreen ? "row" : "column"}
-        spacing="200px" p={isNotSmallerScreen ? "32" : "0"}
+        p={isNotSmallerScreen ? "32" : "0"}
       >
         <Heading>Resume</Heading>
         <Spacer></Spacer>

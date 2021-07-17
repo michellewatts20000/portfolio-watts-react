@@ -1,12 +1,16 @@
 import React from 'react';
-import { Flex } from "@chakra-ui/layout";
+import { Flex, VStack } from "@chakra-ui/layout";
+import Navigation from './Navigation';
+
 import '../styles/styles.css';
 
 function Header() {
   return (
-    <Flex>
-      {/* <Heading>Michelle Watts</Heading> */}
-    </Flex>
+    <VStack p={5}>
+      <Flex w="100%">
+        <Navigation />
+      </Flex>
+    </VStack>
   );
 }
 

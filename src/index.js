@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
+import customTheme from "./utils/theme";
 
 
 ReactDOM.render(
     <React.StrictMode>
-        <ChakraProvider>
-            <ColorModeScript initialColorMode="light"></ColorModeScript>
+        <ChakraProvider theme={customTheme}>
+            <ColorModeScript initialColorMode="dark"></ColorModeScript>
             <App />
         </ChakraProvider>
     </React.StrictMode>,
