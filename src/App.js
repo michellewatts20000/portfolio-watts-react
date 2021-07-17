@@ -1,5 +1,5 @@
 import React from 'react';
-import { VStack, Stack } from "@chakra-ui/layout";
+import { Flex } from "@chakra-ui/layout";
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,12 +16,16 @@ import Contact from './components/pages/Contact';
 function App() {
   return (
     <Router>
-      <VStack>
-        <Stack p={5}>
+      <Flex
+      direction="column"
+      align="center"
+      maxW={{ xl: "1200px" }}
+      m="0 auto"
+    >
           <Header />
           <main>
             <Switch>
-              <Route path="/about">
+              <Route path="/">
                 <About />
               </Route>
               <Route path="/portfolio">
@@ -36,8 +40,7 @@ function App() {
             </Switch>
           </main>
           <Footer />
-        </Stack>
-      </VStack>
+        </Flex>
     </Router>
   );
 };

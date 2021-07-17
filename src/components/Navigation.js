@@ -22,7 +22,7 @@ const Navigation = (props) => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav>
             <NavLink className={location.pathname === '/about' ? 'active' : ''}>
-              <Link to='/about'>About</Link>
+              <Link to='/'>About</Link>
             </NavLink>
             <NavLink className={location.pathname === '/portfolio' ? 'active' : ''}>
               <Link to='/portfolio'>Portfolio</Link>
