@@ -12,12 +12,10 @@ import { useMediaQuery } from '@chakra-ui/media-query';
 
 export default function Contact() {
 
-  const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+  // const [isNotSmallerScreen] = useMediaQuery("(min-width:1000px)");
   return (
     <Stack>
-      <Flex direction={isNotSmallerScreen ? "row" : "column"}
-        spacing="200px" p={isNotSmallerScreen ? "32" : "0"}
-        alignSelf="flex-start">
+      <Flex>
         <form>
           <Heading>Contact Me</Heading>
           <FormControl>

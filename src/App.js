@@ -3,7 +3,7 @@ import { Flex } from "@chakra-ui/layout";
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
 } from "react-router-dom"
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -25,18 +25,10 @@ function App() {
           <Header />
           <main>
             <Switch>
-              <Route path="/">
-                <About />
-              </Route>
-              <Route path="/portfolio">
-                <Portfolio />
-              </Route>
-              <Route path="/resume">
-                <Resume />
-              </Route>
-              <Route path="/contact">
-                <Contact />
-              </Route>
+            <Route exact path = "/" component = {About}/>
+             <Route path = "/portfolio" component = {Portfolio}/>
+               <Route path = "/resume" component = {Resume}/>
+               <Route path = "/contact" component = {Contact}/>
             </Switch>
           </main>
           <Footer />

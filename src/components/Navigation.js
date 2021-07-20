@@ -18,8 +18,7 @@ const Navigation = (props) => {
     <Stack>
 
       <Navbar>
-        <NavbarToggler onClick={toggleNavbar} />
-        <Collapse isOpen={!collapsed} navbar>
+      
           <Nav>
             <NavLink className={location.pathname === '/about' ? 'active' : ''}>
               <Link to='/'>About</Link>
@@ -34,7 +33,7 @@ const Navigation = (props) => {
               <Link to='/contact'>Contact</Link>
             </NavLink>
           </Nav>
-        </Collapse>
+     
       </Navbar>
     </Stack>
   );
